@@ -19,6 +19,12 @@ jobs:
         uses: tj-actions/changed-files@v29.0.4
         with:
           files: schema/prisma.schema
+      
+      - name: List all modified files
+        run: |
+          for file in ${{ steps.changed-files.outputs.only_changed }}; do
+            echo "$file was changed"
+          done
 
       - uses: mohsen1/planetscale-prisma-github-action@main
         if: steps.changed-files-specific.outputs.only_changed == 'true'
