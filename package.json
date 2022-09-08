@@ -1,0 +1,7 @@
+{
+  "name": "pscale-prisma-ga-example",
+  "version": "1.0.0",
+  "description": "mohsen1/planetscale-prisma-github-action example repo",
+  "main": "index.js",
+  "license": "MIT"
+}
