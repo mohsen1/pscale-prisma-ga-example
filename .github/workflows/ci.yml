@@ -25,10 +25,10 @@ jobs:
       
       - name: List all modified files
         run: |
-          echo ${{ steps.changed-files-specific.outputs.any_changed }}
+          echo ${{ steps.changed-files.outputs.any_changed }}
 
       - uses: mohsen1/planetscale-prisma-github-action@main
-        if: steps.changed-files-specific.outputs.any_changed == 'true'
+        if: steps.changed-files.outputs.any_changed == 'true'
         with:
           database: github-actions
           organization: mohsen
