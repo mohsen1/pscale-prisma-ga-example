@@ -31,6 +31,6 @@ jobs:
         if: steps.changed-files.outputs.any_changed == 'true'
         with:
           db-name: github-actions
-          organization: mohsen
+          planetscale-org: mohsen
           planetscale-service-token-id: hucnq9p853sq
           planetscale-service-token: ${{ secrets.PLANETSCALE_SERVICE_TOKEN }}
